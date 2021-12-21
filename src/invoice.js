@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const serverless = require("serverless-http");
 const data = require("./index.json");
+var cors = require("cors");
 
 const app = express();
 
@@ -20,6 +21,6 @@ router.get("/", (req, res, next) => {
   else res.send([]);
 });
 
-app.use("/.netlify/functions/invoice", router);
+app.use("/.netlify/functions/invoice", router, cors());
 
 export const handler = serverless(app);

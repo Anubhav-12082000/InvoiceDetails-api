@@ -1,7 +1,6 @@
 {
   "name": "invoice-details-api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,8 +11,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "netlify-lambda": "^2.0.15",
     "serverless-http": "^2.7.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anubhav-12082000/InvoiceDetails-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Anubhav-12082000/InvoiceDetails-api/issues"
+  },
+  "homepage": "https://github.com/Anubhav-12082000/InvoiceDetails-api#readme",
+  "description": ""
 }
