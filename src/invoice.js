@@ -6,7 +6,7 @@ var cors = require("cors");
 
 const app = express();
 
-router.get("/", (req, res, next) => {
+router.get("/", cors(), (req, res, next) => {
   const requestData = {
     pageNumber: req.query.pageNumber,
     pageSize: req.query.pageSize,
@@ -21,6 +21,6 @@ router.get("/", (req, res, next) => {
   else res.send([]);
 });
 
-app.use("/.netlify/functions/invoice", router, cors());
+app.use("/.netlify/functions/invoice", router);
 
 export const handler = serverless(app);
